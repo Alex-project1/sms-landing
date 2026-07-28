@@ -1,58 +1,49 @@
 import './styles/style.scss';
-
 const burger = document.querySelector('.burger');
-const mobileMenu = document.querySelector('.mobile-menu');
-const mobileMenuLinks = document.querySelectorAll(
-  '.mobile-nav__link',
+const overlay = document.querySelector('.menuOverlay');
+const menuLinks = document.querySelectorAll(
+  '.header__menu-link, .drop__list-link'
 );
 
-const setMenuState = (isOpen) => {
-  if (!burger || !mobileMenu) {
-    return;
-  }
+function setMenuState(isOpen) {
+  if (!burger) return;
 
-  burger.classList.toggle('is-active', isOpen);
-  mobileMenu.classList.toggle('is-open', isOpen);
   document.body.classList.toggle('menu-open', isOpen);
+  burger.classList.toggle('is-active', isOpen);
 
-  burger.setAttribute(
-    'aria-expanded',
-    String(isOpen),
-  );
-
+  burger.setAttribute('aria-expanded', String(isOpen));
   burger.setAttribute(
     'aria-label',
-    isOpen ? 'Закрыть меню' : 'Открыть меню',
+    isOpen ? 'Закрыть меню' : 'Открыть меню'
   );
-
-  mobileMenu.setAttribute(
-    'aria-hidden',
-    String(!isOpen),
-  );
-};
-
-const closeMenu = () => {
-  setMenuState(false);
-};
+}
 
 burger?.addEventListener('click', () => {
-  const isOpen = burger.classList.contains('is-active');
+  const isOpen = !document.body.classList.contains('menu-open');
 
-  setMenuState(!isOpen);
+  setMenuState(isOpen);
 });
 
-mobileMenuLinks.forEach((link) => {
-  link.addEventListener('click', closeMenu);
+overlay?.addEventListener('click', () => {
+  setMenuState(false);
+});
+
+menuLinks.forEach((link) => {
+  link.addEventListener('click', () => {
+    if (window.innerWidth <= 1200) {
+      setMenuState(false);
+    }
+  });
 });
 
 document.addEventListener('keydown', (event) => {
   if (event.key === 'Escape') {
-    closeMenu();
+    setMenuState(false);
   }
 });
 
 window.addEventListener('resize', () => {
-  if (window.innerWidth > 900) {
-    closeMenu();
+  if (window.innerWidth > 1200) {
+    setMenuState(false);
   }
 });

@@ -1,6 +1,77 @@
-@use 'fonts';
-@use 'reset';
-@use 'variables';
-@use 'header';
+@use "fonts";
+@use "reset";
+@use "variables";
+@use "header";
+
+.hoverText {
+  transition: color 0.3s ease;
+
+  &:hover,
+  &:focus-visible {
+    color: var(--colorBlue);
+  }
+}
+
+.btn {
+  padding: 8px 16px;
+
+  color: #000;
+  background-color: #fff;
+
+  border: 1px solid #000;
+  border-radius: 3px;
+
+  transition:
+    color 0.3s ease,
+    border-color 0.3s ease,
+    box-shadow 0.3s ease,
+    transform 0.3s ease;
+
+  &:hover,
+  &:focus-visible {
+    color: var(--colorBlue);
+    border-color: var(--colorBlue);
+    box-shadow: 0 0 3px var(--colorBlue);
+    transform: translateY(-2px);
+  }
+
+  &:active {
+    transform: translateY(0) scale(0.98);
+  }
+
+  &:focus-visible {
+    outline: 2px solid var(--colorBlue);
+    outline-offset: 3px;
+  }
+}
+
+.dropBtn {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+.hero {
+  min-height: 100vh;
+  min-height: 100svh;
+
+  padding-top: calc(var(--header-height) + 20px);
+  padding-bottom: 60px;
 
 
+
+
+
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+.mainHero{
+  background-image:
+    linear-gradient(
+      135deg,
+      rgba(0, 6, 22, 1) 0%,
+      rgba(0, 6, 22, 0) 100%
+    ),
+    url("/main/topBg.png");
+}
