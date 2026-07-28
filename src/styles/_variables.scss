@@ -1,0 +1,42 @@
+:root{
+   --h1: 64px;
+   --h2: 48px;
+   --h3: 40px;
+   --h4: 36px;
+   --order: 24px;
+   --text: 20px;
+   --btn: 16px;
+   --agree: 12px;
+}
+
+@media (max-width:1680px){
+    :root{
+        --h1: 48px;
+        --h2: 40px;
+        --h3: 36px;
+        --h4: 32px;
+        --order: 20px;
+        --text: 16px;
+     }
+}
+
+@media (max-width:960px){
+    :root{
+        --h1: 40px;
+        --h2: 36px;
+        --h3: 32px;
+        --h4: 24px;
+        --order: 16px;
+        --text: 16px;
+     }
+}
+
+
+@media (max-width:480px){
+    :root{
+        --h1: 32px;
+        --h2: 24px;
+        --h3: 24px;
+        --h4: 20px;
+     }
+}
