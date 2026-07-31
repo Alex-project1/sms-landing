@@ -8,6 +8,11 @@
 
   font-size: var(--btn);
   color: #fff;
+  &.scrolled {
+  background-color: rgba(32, 43, 59, .8);
+  backdrop-filter: blur(3px);
+  box-shadow: 0 4px 20px rgba(0, 0, 0, .8);
+}
   &__panel {
     display: flex;
     align-items: center;
@@ -153,86 +158,126 @@
     }
   }
 
-  .drop__list {
-    position: absolute;
-    top: 100%;
-    left: 0;
-    z-index: 50;
+ .drop__list {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  z-index: 50;
 
-    width: max-content;
-    min-width: 100%;
+  width: max-content;
+  min-width: 100%;
+  padding-top: 10px;
 
-    /*
-      Невидимая область между кнопкой и меню.
-      Благодаря ей меню не пропадает при движении мыши вниз.
-    */
-    padding-top: 10px;
+  visibility: hidden;
+  opacity: 0;
+  pointer-events: none;
 
-    visibility: hidden;
-    opacity: 0;
-    pointer-events: none;
+  transform: translateY(-8px);
 
-    transform: translateY(-8px);
+  transition:
+    opacity 0.3s ease,
+    transform 0.3s ease,
+    visibility 0.3s ease;
 
-    transition:
-      opacity 0.3s ease,
-      transform 0.3s ease,
-      visibility 0.3s ease;
+  &-items {
+    display: grid;
+    gap: 5px;
 
-    &-items {
-      display: grid;
-      gap: 10px;
+    min-width: 360px;
+    margin: 0;
+    padding: 8px;
 
-      min-width: 360px;
-      margin: 0;
-      padding: 6px;
+    list-style: none;
 
-      list-style: none;
+    border: 1px solid rgba(129, 221, 255, 0.12);
+    border-radius: 5px;
 
-      border-radius: 3x;
+    background-color: var(--colorBg);
 
-      background-color:  var(--colorBg);
-    }
-
-    &-item {
-      margin: 0;
-      padding: 0;
-    }
-
-    &-link {
-      position: relative;
-
-    
-
-    
-
-      color: #fff;
-      white-space: nowrap;
-
-
-      transform: translateX(0);
-
-      transition:
-        color 0.3s ease,
-        transform 0.3s ease;
-
-      &:hover,
-      &:focus-visible {
-        color: var(--colorBlue);
-        transform: translateX(4px);
-      }
-
-      &:focus-visible {
-        outline: 2px solid var(--colorBlue);
-        outline-offset: -2px;
-      }
-
-      &:active {
-        transform: translateX(2px);
-      }
-    }
+    box-shadow:
+      0 12px 30px rgba(0, 0, 0, 0.3),
+      0 0 12px rgba(129, 221, 255, 0.08);
   }
 
+  &-item {
+    margin: 0;
+    padding: 0;
+  }
+
+  &-link {
+    position: relative;
+
+    display: block;
+    overflow: hidden;
+
+    padding: 10px 14px;
+
+    color: #fff;
+    white-space: nowrap;
+
+    border-radius: 4px;
+
+    background-color: transparent;
+
+    transform: translateX(0);
+
+    transition:
+      color 0.3s ease,
+      background-color 0.3s ease,
+      box-shadow 0.3s ease,
+      transform 0.3s ease;
+
+    /*
+      Небольшая светлая полоса слева.
+    */
+    &::before {
+      content: "";
+
+      position: absolute;
+      top: 50%;
+      left: 0;
+
+      width: 2px;
+      height: 0;
+
+      border-radius: 2px;
+      background-color: var(--colorBlue);
+      box-shadow: 0 0 8px var(--colorBlue);
+
+      transform: translateY(-50%);
+
+      transition: height 0.3s ease;
+    }
+
+    &:hover,
+    &:focus-visible {
+      color: var(--colorBlue);
+
+      // background-color: rgba(129, 221, 255, 0.07);
+      background-color: #fff;
+
+      box-shadow:
+        inset 0 0 0 1px rgba(129, 221, 255, 0.5),
+        0 4px 12px rgba(0, 0, 0, 0.5);
+
+      transform: translateX(3px);
+
+      &::before {
+        height: 60%;
+      }
+    }
+
+    &:focus-visible {
+      outline: 1px solid rgba(129, 221, 255, 0.6);
+      outline-offset: -1px;
+    }
+
+    &:active {
+      background-color: rgba(129, 221, 255, 0.11);
+      transform: translateX(2px) scale(0.99);
+    }
+  }
+}
   .socLinks {
     display: flex;
     align-items: center;
@@ -573,10 +618,7 @@ body.menu-open {
       width: 180px;
       margin-top: 50px;
 
-      .btn {
-        flex-basis: 100%;
-        width: max-content;
-      }
+    
     }
   }
 

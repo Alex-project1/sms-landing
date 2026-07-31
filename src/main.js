@@ -4,7 +4,15 @@ const overlay = document.querySelector('.menuOverlay');
 const menuLinks = document.querySelectorAll(
   '.header__menu-link, .drop__list-link'
 );
+const header = document.querySelector(".header");
 
+window.addEventListener("scroll", () => {
+  if (window.scrollY > 100) {
+    header.classList.add("scrolled");
+  } else {
+    header.classList.remove("scrolled");
+  }
+});
 function setMenuState(isOpen) {
   if (!burger) return;
 
