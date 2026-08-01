@@ -1,0 +1,135 @@
+.partners {
+    padding: 50px 0;
+  background-color: #F3F3F3;
+    &__title {   
+      font-weight: 500;
+      color:#000;
+    
+    }
+  
+    &__slider {
+      display: grid;
+      grid-template-columns: 26px minmax(0, 1fr) 26px;
+      align-items: center;
+      gap: 12px;
+      margin-top: 50px;
+    }
+  
+    &__swiper {
+      width: 100%;
+      min-width: 0;
+      overflow: hidden;
+    }
+  
+    &__swiper-items {
+      align-items: stretch;
+    }
+  
+    &__swiper-item {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+  
+      height: 100px;
+      padding: 15px 20px;
+  
+      background-color: #fff;
+  
+      transition:
+        transform 0.35s cubic-bezier(0.22, 1, 0.36, 1),
+        box-shadow 0.35s ease;
+  
+      img {
+        display: block;
+  
+        width: 100%;
+        max-width: 100%;
+        height: 170px;
+  
+        object-fit: contain;
+  
+        transition:
+          transform 0.45s cubic-bezier(0.22, 1, 0.36, 1),
+          filter 0.35s ease;
+      }
+    }
+  
+    &__swiper-arrow {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+  
+      width: 26px;
+      height: 49px;
+      padding: 0;
+  
+      border: 0;
+      background: transparent;
+  
+      cursor: pointer;
+  
+      transition:
+        transform 0.3s ease,
+        opacity 0.3s ease;
+  
+      svg {
+        width: 100%;
+        height: 100%;
+      }
+  
+      path {
+        transition:
+          stroke 0.3s ease,
+          fill 0.3s ease;
+      }
+  
+      &:disabled {
+        opacity: 0.25;
+        cursor: default;
+      }
+  
+      &--prev:hover:not(:disabled) {
+        transform: translateX(-3px);
+      }
+  
+      &--next:hover:not(:disabled) {
+        transform: translateX(3px);
+      }
+  
+      &:hover:not(:disabled) {
+        path {
+          stroke: var(--colorBlue);
+        }
+      }
+  
+      &:active:not(:disabled) {
+        transform: scale(0.92);
+      }
+    }
+  }
+  
+  @media (hover: hover) and (pointer: fine) {
+    .partners__swiper-item:hover {
+      transform: translateY(-3px);
+  
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
+  
+      img {
+        transform: scale(1.04);
+      }
+    }
+  }
+  
+  @media (max-width: 767px) {
+    .partners {
+      &__slider {
+        grid-template-columns: 20px minmax(0, 1fr) 20px;
+        gap: 8px;
+      }
+  
+      &__swiper-arrow {
+        width: 20px;
+        height: 40px;
+      }
+    }
+  }

@@ -1,4 +1,5 @@
 import './styles/style.scss';
+import './slider.js';
 const burger = document.querySelector('.burger');
 const overlay = document.querySelector('.menuOverlay');
 const menuLinks = document.querySelectorAll(
@@ -17,6 +18,7 @@ function setMenuState(isOpen) {
   if (!burger) return;
 
   document.body.classList.toggle('menu-open', isOpen);
+  document.documentElement.classList.toggle("menu-open", isOpen);
   burger.classList.toggle('is-active', isOpen);
 
   burger.setAttribute('aria-expanded', String(isOpen));

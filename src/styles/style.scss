@@ -5,60 +5,8 @@
 @use "hero";
 @use "services";
 @use "offer";
-.hoverText {
-  transition: color 0.3s ease;
-
-  &:hover,
-  &:focus-visible {
-    color: var(--colorBlue);
-  }
-}
-
-.btn {
-  padding: 8px 16px;
-
-  color: #000;
-  background-color: #fff;
-
-  border: 1px solid #000;
-  border-radius: 3px;
-  transition:
-    color 0.3s ease,
-    border-color 0.3s ease,
-    box-shadow 0.3s ease,
-    transform 0.3s ease;
-
-  &:hover,
-  &:focus-visible {
-    color: var(--colorBlue);
-    border-color: var(--colorBlue);
-    box-shadow: 0 0 3px var(--colorBlue);
-    transform: translateY(-2px);
-  }
-
-  &:active {
-    transform: translateY(0) scale(0.98);
-  }
-
-  &:focus-visible {
-    outline: 2px solid var(--colorBlue);
-    outline-offset: 3px;
-  }
-}
-
-.dropBtn {
-  display: flex;
-  align-items: center;
-  gap: 5px;
-}
-
-h1{
-  font-size: var(--h1);
-
-}
-h4{
-  font-size: var(--h4);
-}
-h3{
-  font-size: var(--h3);
-}
+@use "about";
+@use "partners";
+@use "portfolio";
+@use "advanages";
+@use 'global';

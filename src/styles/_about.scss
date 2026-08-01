@@ -1,0 +1,16 @@
+.about{
+    padding: 50px 0;
+    &__descr{
+        margin-top: 30px;
+        font-size: var(--text);
+        display: flex;
+        flex-direction: column;
+        gap: 30px;
+        font-weight: 400;
+    }
+    &__btn{
+        display: block;
+        width: fit-content;
+        margin: 30px auto 0;
+    }
+}

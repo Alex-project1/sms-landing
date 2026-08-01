@@ -19,7 +19,6 @@
     justify-content: space-between;
     flex-grow: 1;
     gap: 30px;
-      display: contents;
   }
   &__inner {
     display: flex;
@@ -227,9 +226,7 @@
       box-shadow 0.3s ease,
       transform 0.3s ease;
 
-    /*
-      Небольшая светлая полоса слева.
-    */
+
     &::before {
       content: "";
 
@@ -248,24 +245,26 @@
 
       transition: height 0.3s ease;
     }
+@media (min-width:1201px){
 
-    &:hover,
-    &:focus-visible {
-      color: var(--colorBlue);
+  &:hover,
+  &:focus-visible {
+    color: var(--colorBlue);
 
-      // background-color: rgba(129, 221, 255, 0.07);
-      background-color: #fff;
+    // background-color: rgba(129, 221, 255, 0.07);
+    background-color: #fff;
 
-      box-shadow:
-        inset 0 0 0 1px rgba(129, 221, 255, 0.5),
-        0 4px 12px rgba(0, 0, 0, 0.5);
+    box-shadow:
+      inset 0 0 0 1px rgba(129, 221, 255, 0.5),
+      0 4px 12px rgba(0, 0, 0, 0.5);
 
-      transform: translateX(3px);
+    transform: translateX(3px);
 
-      &::before {
-        height: 60%;
-      }
+    &::before {
+      height: 60%;
     }
+  }
+}
 
     &:focus-visible {
       outline: 1px solid rgba(129, 221, 255, 0.6);
@@ -438,15 +437,19 @@ body.menu-open {
     pointer-events: auto;
   }
 }
+html.menu-open,
+body.menu-open {
+  height: 100%;
+  overflow: hidden;
+  overscroll-behavior: none;
+}
 @media (max-width: 1200px) {
   .header {
     &__inner {
       gap: 15px;
     }
 
-    &__panel {
-      display: contents;
-    }
+  
 
     &__menu {
       position: fixed;
@@ -457,9 +460,9 @@ body.menu-open {
       display: flex;
       flex-direction: column;
       align-items: flex-start;
-      gap: 13px;
+      gap: 20px;
 
-      width: 320px;
+      width: 672px;
       max-width: 100%;
       height: 100dvh;
       margin: 0;
@@ -512,7 +515,7 @@ body.menu-open {
 
       &-items {
         display: grid;
-        gap: 13px;
+        gap: 20px;
 
         min-width: 0;
         padding: 0;
@@ -532,13 +535,10 @@ body.menu-open {
 
         background: transparent;
         border-radius: 0;
-
-        &:hover,
-        &:focus-visible {
+        &:hover{
           color: var(--colorBlue);
-          background: transparent;
-          transform: translateX(4px);
         }
+       
       }
     }
   }
