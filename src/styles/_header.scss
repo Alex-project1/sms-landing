@@ -277,54 +277,7 @@
     }
   }
 }
-  .socLinks {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-shrink: 0;
-
-    width: 30px;
-    height: 30px;
-
-    color: #000;
-    background-color: #fff;
-
-    border: 1px solid #000;
-    border-radius: 3px;
-
-    transition:
-      border-color 0.3s ease,
-      box-shadow 0.3s ease,
-      transform 0.3s ease;
-
-    svg {
-      display: block;
-    }
-
-    svg path {
-      transition: stroke 0.3s ease;
-    }
-
-    &:hover,
-    &:focus-visible {
-      border-color: var(--colorBlue);
-      box-shadow: 0 0 3px var(--colorBlue);
-      transform: translateY(-2px);
-
-      svg path {
-        stroke: var(--colorBlue);
-      }
-    }
-
-    &:active {
-      transform: translateY(0) scale(0.96);
-    }
-
-    &:focus-visible {
-      outline: 2px solid var(--colorBlue);
-      outline-offset: 3px;
-    }
-  }
+  
 }
 
 @media (prefers-reduced-motion: reduce) {

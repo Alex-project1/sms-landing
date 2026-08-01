@@ -20,7 +20,12 @@
     margin: 0 auto;
     padding: 0 20px;
   }
-  
+  .container__fluid{
+     width: 100%;
+    max-width: 1572px;
+    margin: 0 auto;
+    padding: 0 20px;
+  }
   html {
     scrollbar-width: thin;
     scrollbar-color:
@@ -58,14 +63,39 @@
     background-color: var(--scrollbar-track);
   }
 .hoverText {
-    transition: color 0.3s ease;
-  
-    &:hover,
-    &:focus-visible {
-      color: var(--colorBlue);
-    }
+  position: relative;
+  padding: 8px 0;
+  transition: color 0.3s ease;
+
+  &::after {
+    content: "";
+    position: absolute;
+    right: 0;
+    bottom: 3px;
+    width: 100%;
+    height: 1px;
+    background-color: currentColor;
+    transform: scaleX(0);
+    transform-origin: right center;
+    transition: transform 0.3s ease;
   }
-  
+
+  &:hover,
+  &:focus-visible {
+    color: var(--colorBlue);
+  }
+
+  &:hover::after,
+  &:focus-visible::after {
+    transform: scaleX(1);
+    transform-origin: left center;
+  }
+}
+  .prod{
+    display: flex;
+    justify-content: center;
+    margin-top: 30px;
+  }
   .btn {
     padding: 8px 16px;
   
@@ -103,7 +133,54 @@
     align-items: center;
     gap: 5px;
   }
-  
+  .socLinks {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+
+    width: 30px;
+    height: 30px;
+
+    color: #000;
+    background-color: #fff;
+
+    border: 1px solid #000;
+    border-radius: 3px;
+
+    transition:
+      border-color 0.3s ease,
+      box-shadow 0.3s ease,
+      transform 0.3s ease;
+
+    svg {
+      display: block;
+    }
+
+    svg path {
+      transition: stroke 0.3s ease;
+    }
+
+    &:hover,
+    &:focus-visible {
+      border-color: var(--colorBlue);
+      box-shadow: 0 0 3px var(--colorBlue);
+      transform: translateY(-2px);
+
+      svg path {
+        stroke: var(--colorBlue);
+      }
+    }
+
+    &:active {
+      transform: translateY(0) scale(0.96);
+    }
+
+    &:focus-visible {
+      outline: 2px solid var(--colorBlue);
+      outline-offset: 3px;
+    }
+  }
   h1{
     font-size: var(--h1);
   
