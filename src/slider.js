@@ -32,13 +32,10 @@ if (partnersSlider) {
         spaceBetween: 10,
       },
 
-      480: {
-        slidesPerView: 2,
-        spaceBetween: 10,
-      },
+  
 
-      768: {
-        slidesPerView: 3,
+      1200: {
+        slidesPerView: 2,
         spaceBetween: 12,
       },
     },

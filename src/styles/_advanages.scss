@@ -72,3 +72,41 @@
       font-size: var(--text);
     }
   }
+
+  @media (max-width:1680px){
+    .advanages{
+      padding: 100px 0;
+    }
+    .advanages__items{
+      grid-template-columns: repeat(2, 358px);
+      justify-content: center;
+      gap: 80px;
+    }
+  }
+
+  @media (max-width:960px){
+    .advanages{
+      padding: 85px 0;
+    }
+     .advanages__items{
+      grid-template-columns: repeat(2, 250px);
+      justify-content: space-around;
+    
+    }
+  }
+  @media (max-width:670px){
+  
+     .advanages__items{
+      grid-template-columns: repeat(2, 250px);
+      justify-content: space-between;
+     gap: 20px;
+    }
+  }
+  @media (max-width:550px){
+  
+     .advanages__items{
+      grid-template-columns: repeat(1, 250px);
+      justify-content: center;
+   gap: 70px;
+    }
+  }

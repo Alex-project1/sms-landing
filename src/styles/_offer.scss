@@ -1,13 +1,17 @@
-.offer{
-    
-    padding: 86px 0 114px;
-    background-color: #F3F3F3;
-    &__title{
-        font-weight: 600;
-        color: #000;
-        span{
-            display: block;
-            color: var(--colorRed) ;
-        }
+.offer {
+  padding: 86px 0 114px;
+  background-color: #f3f3f3;
+  &__title {
+    font-weight: 600;
+    color: #000;
+    span {
+      display: block;
+      color: var(--colorRed);
     }
+  }
+}
+@media (max-width: 960px) {
+  .offer {
+   padding: 50px 0;
+  }
 }
