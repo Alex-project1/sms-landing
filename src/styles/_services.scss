@@ -53,9 +53,17 @@
     --bg-image: url("/main/4.webp");
   }
 }
+@media (max-width: 1200px) {
+ .services__items{
+  gap: 12px;
+ }
+}
 @media (max-width: 960px) {
   .services {
     padding: 30px 0;
+    &__items{
+      gap: 10px;
+    }
   }
 }
 @media (max-width: 780px) {
@@ -70,5 +78,10 @@
     .btn {
       width: 174px;
     }
+  }
+}
+@media (max-width:480px){
+  .services{
+    padding-bottom: 40px;
   }
 }

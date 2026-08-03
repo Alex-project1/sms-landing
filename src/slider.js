@@ -10,7 +10,7 @@ if (partnersSlider) {
     modules: [Navigation, Autoplay],
 
     slidesPerView: 3,
-    spaceBetween: 12,
+    spaceBetween: 30,
     speed: 650,
 
     loop: true,
@@ -34,9 +34,16 @@ if (partnersSlider) {
 
   
 
+      960: {
+        slidesPerView: 1,
+        spaceBetween: 0,
+      },
       1200: {
         slidesPerView: 2,
-        spaceBetween: 12,
+        spaceBetween: 29,
+      },
+        1680: {
+        slidesPerView: 3,
       },
     },
   });

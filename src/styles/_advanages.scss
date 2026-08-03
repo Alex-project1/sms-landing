@@ -79,7 +79,7 @@
     }
     .advanages__items{
       grid-template-columns: repeat(2, 358px);
-      justify-content: center;
+      // justify-content: center;
       gap: 80px;
     }
   }
@@ -89,10 +89,11 @@
       padding: 85px 0;
     }
      .advanages__items{
-      grid-template-columns: repeat(2, 250px);
-      justify-content: space-around;
+      grid-template-columns: repeat(2, 270px);
+   
     
     }
+  
   }
   @media (max-width:670px){
   
@@ -105,7 +106,7 @@
   @media (max-width:550px){
   
      .advanages__items{
-      grid-template-columns: repeat(1, 250px);
+      grid-template-columns: repeat(1, 270px);
       justify-content: center;
    gap: 70px;
     }

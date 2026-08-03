@@ -10,8 +10,26 @@
     }
   }
 }
+
+
+@media (max-width: 1200px) {
+   .offer {
+   padding: 80px 0;
+  }
+  .offer__inner{
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+
+  }
+}
 @media (max-width: 960px) {
   .offer {
    padding: 50px 0;
+  }
+}
+@media (max-width:480px){
+  .offer {
+   padding: 30px 0;
   }
 }
