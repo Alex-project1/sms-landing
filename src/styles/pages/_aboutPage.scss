@@ -1,0 +1,40 @@
+.aboutPage {
+  &__contacts {
+    padding: 50px 0;
+    &-title {
+      margin-bottom: 10px;
+    }
+  }
+  &__contacts-inner {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+  }
+  &__contacts-info {
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+  .header__btns {
+    gap: 25px;
+  }
+  @media (max-width: 725px) {
+    &__contacts-inner {
+      padding-top: 200px;
+    }
+    .header__btns {
+      margin-top: 0;
+      gap: 20px;
+    }
+  }
+  @media (max-width: 480px) {
+    &__contacts-inner {
+      padding-top: 238px;
+    }
+   
+  }
+}
