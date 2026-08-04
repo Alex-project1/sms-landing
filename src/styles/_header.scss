@@ -8,6 +8,7 @@
 
   font-size: var(--btn);
   color: #fff;
+  transition: all .3s;
   &.scrolled {
   background-color: rgba(32, 43, 59, .8);
   backdrop-filter: blur(3px);

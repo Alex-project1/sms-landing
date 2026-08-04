@@ -1,0 +1,505 @@
+<!doctype html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>ООО "СМС"</title>
+  </head>
+
+  <body>
+    <div class="page technologicalPage">
+      <header class="header">
+        <div class="container">
+          <div class="header__inner">
+            <a
+              href="/"
+              class="header__logo logo"
+              aria-label="ООО СМС — на главную"
+            >
+              <img src="/logo.svg" alt="ООО СМС" width="172" height="68" />
+            </a>
+
+            <div class="header__panel" id="headerPanel">
+              <ul class="header__menu">
+                <li class="header__menu-item">
+                  <a href="#" class="header__menu-link hoverText"> Главная </a>
+                </li>
+
+                <li class="header__menu-item">
+                  <a href="#" class="header__menu-link hoverText dropBtn">
+                    Услуги
+
+                    <svg
+                      width="8"
+                      height="7"
+                      viewBox="0 0 8 7"
+                      fill="none"
+                      xmlns="http://www.w3.org/2000/svg"
+                      aria-hidden="true"
+                    >
+                      <path
+                        d="M2.8288 5.6915C3.22244 6.30382 4.11752 6.30382 4.51116 5.6915L7.1795 1.54076C7.60732 0.875247 7.12948 0 6.33832 0H1.00165C0.210483 0 -0.267359 0.875246 0.16047 1.54076L2.8288 5.6915Z"
+                        fill="currentColor"
+                      />
+                    </svg>
+                  </a>
+
+                  <div class="drop__list">
+                    <ul class="drop__list-items">
+                      <li class="drop__list-item">
+                        <a href="#" class="drop__list-link ">
+                          Проектирование и разработка технологических систем
+                        </a>
+                      </li>
+
+                      <li class="drop__list-item">
+                        <a href="#" class="drop__list-link ">
+                          Монтаж технологического оборудования и трубопроводов
+                        </a>
+                      </li>
+
+                      <li class="drop__list-item">
+                        <a href="#" class="drop__list-link ">
+                          Электромонтаж и автоматизация (АСУ ТП)
+                        </a>
+                      </li>
+
+                      <li class="drop__list-item">
+                        <a href="#" class="drop__list-link ">
+                          Нестандартный инжиниринг
+                        </a>
+                      </li>
+                    </ul>
+                  </div>
+                </li>
+
+                <li class="header__menu-item">
+                  <a href="#" class="header__menu-link hoverText"> Проекты </a>
+                </li>
+
+                <li class="header__menu-item">
+                  <a href="#" class="header__menu-link hoverText">
+                    О компании
+                  </a>
+                </li>
+              </ul>
+
+              <div class="header__btns">
+                <a
+                  href="https://t.me/username"
+                  class="tg socLinks"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  aria-label="Telegram"
+                >
+                  <svg
+                    class="tgIcon"
+                    width="25"
+                    height="22"
+                    viewBox="0 0 25 22"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M18.9308 19L20.2291 13.8066M20.9308 11L20.6808 12M0.930866 9.5C8.43087 6.5 23.5309 0.5 23.9309 0.5C24.3309 0.5 24.4309 0.833333 24.4309 1C23.2642 7.16667 24.4309 1 20.4309 20.5C20.2944 21.1652 20.1076 21.7845 18.9309 21C17.4309 20 13.9308 16.9705 13.4309 17C12.9309 17.0295 9.43091 20 8.93091 20C8.53091 20 6.9309 13.5 6.43087 13C5.82716 12.3963 6.23766 12.9122 0.930869 10.5C0.287074 10.2074 0.430813 9.7 0.930866 9.5ZM8.93091 11L19.9308 4.5C20.4308 4.5 10.5889 13.0257 10.4308 13.5C9.43079 16.5 9.6708 16.5 9.43079 16.5C9.19077 16.5 7.93079 12.5 7.93079 12C7.93079 11.4343 8.7642 11.1667 8.93091 11Z"
+                      stroke="black"
+                      stroke-linecap="round"
+                    />
+                  </svg>
+                </a>
+
+                <a
+                  href="https://wa.me/380501234567"
+                  class="wu socLinks"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  aria-label="WhatsApp"
+                >
+                  <svg
+                    class="wuIcon"
+                    width="24"
+                    height="24"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M5.09275 2.77463C7.00188 1.34606 9.37217 0.5 11.9401 0.5C18.2582 0.5 23.3801 5.62189 23.3801 11.9401C23.3801 18.2582 18.2582 23.3801 11.9401 23.3801C8.72881 23.3801 7.22354 21.6741 7.05629 21.7076C6.88904 21.741 6.52108 22.0756 6.25348 22.3097C5.98588 22.5439 5.18307 23.1794 3.7447 23.3132C2.30633 23.447 2.20597 22.6777 2.17252 22.3097C2.13907 21.9417 2.50703 21.5738 1.50351 18.2287C0.700703 15.5527 0.5 12.9213 0.5 11.9401C0.5 9.41251 1.31969 7.0764 2.70774 5.18307M3.50388 4.213C3.66168 4.04082 3.82467 3.87349 3.99262 3.71124M16.2458 15.5862C16.121 15.7264 15.9895 15.8604 15.8517 15.9876M14.9508 16.6679C14.0921 17.1915 13.0846 17.4929 12.0072 17.4929C11.1067 17.4929 10.2551 17.2824 9.49837 16.9076C9.09696 16.6902 9.13041 16.5563 9.03006 16.5563C8.94978 16.5563 8.75131 16.7347 8.66211 16.8239C8.59521 16.8908 7.9262 17.5598 7.49134 17.5598C7.05649 17.5598 6.95616 16.9911 6.5213 15.3186C6.17342 13.9806 6.24255 12.3973 6.3206 11.7729C6.3206 8.61379 8.86657 6.05284 12.0072 6.05284C15.1478 6.05284 17.6938 8.61379 17.6938 11.7729C17.6938 12.8446 17.4008 13.8474 16.8909 14.7048"
+                      stroke="black"
+                      stroke-linecap="round"
+                    />
+                  </svg>
+                </a>
+
+                <a href="tel:+79294340469" class="tel  btn">
+                  +7 929 434 04 69
+                </a>
+
+                <a href="mailto:info@sms-125.ru" class="email  btn">
+                  info@sms-125.ru
+                </a>
+              </div>
+            </div>
+
+            <button
+              class="burger"
+              type="button"
+              aria-label="Открыть меню"
+              aria-controls="headerPanel"
+              aria-expanded="false"
+            >
+              <span></span>
+              <span></span>
+              <span></span>
+            </button>
+          </div>
+        </div>
+
+        <button
+          class="menuOverlay"
+          type="button"
+          aria-label="Закрыть меню"
+        ></button>
+      </header>
+      <main class="main">
+        <section class="hero technologicalPageHero">
+            <div class="container">
+              <div class="hero__inner">
+                <h1 class="hero__title">
+                  Полный цикл
+                  <span> инжиниринговых услуг</span>
+                  для промышленных предприятий
+                </h1>
+                <ul class="hero__subtitle">
+                  <li class="hero__subtitle-point">
+                    Быстрые сроки выполнения работ
+                  </li>
+                  <li class="hero__subtitle-point">
+                    Соблюдение стандартов пищевой безопасности
+                  </li>
+                  <li class="hero__subtitle-point">
+                    Соблюдение процедур охраны труда и промышленной безопасности
+                  </li>
+                </ul>
+                <button class="hero__btn btn">Оставить заявку</button>
+              </div>
+            </div>
+          </section>
+        <section class="offer">
+            <div class="container">
+              <div class="offer__inner">
+                <h3 class="offer__title">
+                  <span>Быстро рассчитаем стоимость проекта!</span>
+  
+                  Оставьте заявку и мы свяжемся с Вами для уточнения всех деталей.
+                </h3>
+                <div class="offer__form"></div>
+              </div>
+            </div>
+          </section>
+        <section class="advanages">
+          <div class="container">
+            <div class="advanages__inner">
+              <div class="advanages__items">
+                <div class="advanages__item">
+                  <div class="advanages__item-icon">
+                    <img src="/icons/adv1.svg" alt="icon" />
+                  </div>
+                  <h4 class="advanages__item-title">
+                    Работа <br />
+                    по всей России
+                  </h4>
+                  <p class="advanages__item-text">
+                    Покрываем любые регионы страны
+                  </p>
+                </div>
+                <div class="advanages__item">
+                  <div class="advanages__item-icon">
+                    <img src="/icons/adv2.svg" alt="icon" />
+                  </div>
+                  <h4 class="advanages__item-title">
+                    Профессионализм <br />
+                    и опыт
+                  </h4>
+                  <p class="advanages__item-text">
+                    Команда экспертов с многолетним опытом
+                  </p>
+                </div>
+                <div class="advanages__item">
+                  <div class="advanages__item-icon">
+                    <img src="/icons/adv3.svg" alt="icon" />
+                  </div>
+                  <h4 class="advanages__item-title">
+                    Обеспечение <br />
+                    безопасности
+                  </h4>
+                  <p class="advanages__item-text">
+                    Строго соблюдаем все нормативы
+                  </p>
+                </div>
+                <div class="advanages__item">
+                  <div class="advanages__item-icon">
+                    <img src="/icons/adv4.svg" alt="icon" />
+                  </div>
+                  <h4 class="advanages__item-title">
+                    Современные <br />
+                    технологии
+                  </h4>
+                  <p class="advanages__item-text">
+                    Используем передовые инструменты и методы
+                  </p>
+                </div>
+                <div class="advanages__item">
+                  <div class="advanages__item-icon">
+                    <img src="/icons/adv5.svg" alt="icon" />
+                  </div>
+                  <h4 class="advanages__item-title">
+                    Контроль <br />
+                    качества
+                  </h4>
+                  <p class="advanages__item-text">
+                    Гарантируем соответствие высоким стандартам
+                  </p>
+                </div>
+                <div class="advanages__item">
+                  <div class="advanages__item-icon">
+                    <img src="/icons/adv6.svg" alt="icon" />
+                  </div>
+                  <h4 class="advanages__item-title">
+                    Соблюдение <br />
+                    сроков
+                  </h4>
+                  <p class="advanages__item-text">
+                    Выполняем проекты в оговоренные сроки
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+        <section class="portfolio">
+            <div class="container">
+              <div class="portfolio__inner">
+                <h2 class="portfolio__title">Портфолио проектов</h2>
+                <div class="portfolio__items">
+                  <div class="portfolio__item">
+                    <a href="#">
+                      <img src="/main/1.webp" alt="portfolio" />
+                    </a>
+                  </div>
+                  <div class="portfolio__item">
+                    <a href="#">
+                      <img src="/main/2.webp" alt="portfolio" />
+                    </a>
+                  </div>
+                  <div class="portfolio__item">
+                    <a href="#">
+                      <img src="/main/3.webp" alt="portfolio" />
+                    </a>
+                  </div>
+                  <div class="portfolio__item">
+                    <a href="#">
+                      <img src="/main/4.webp" alt="portfolio" />
+                    </a>
+                  </div>
+                </div>
+                <a href="#" class="portfolio__btn btn">Все проекты</a>
+              </div>
+            </div>
+          </section>
+          <section class="offer">
+            <div class="container">
+              <div class="offer__inner">
+                <h3 class="offer__title">
+                  <span>Быстро рассчитаем стоимость проекта!</span>
+  
+                  Оставьте заявку и мы свяжемся с Вами для уточнения всех деталей.
+                </h3>
+                <div class="offer__form"></div>
+              </div>
+            </div>
+          </section>
+          <section class="services ">
+            <div class="container">
+              <div class="services__inner">
+                <div class="services__items devPageSevises">
+               
+                  <div class="services__item main__services-item">
+                    <h4 class="services__item-title">
+                      Монтаж технологического <br />
+                      оборудования <br />
+                      и трубопроводов
+                    </h4>
+                    <a href="#" class="services__item-btn btn"> Подробнее </a>
+                  </div>
+                  <div class="services__item main__services-item">
+                    <h4 class="services__item-title">
+                      Электромонтаж <br />и автоматизация <br />
+                      (АСУ ТП)
+                    </h4>
+                    <a href="#" class="services__item-btn btn"> Подробнее </a>
+                  </div>
+                  <div class="services__item main__services-item">
+                    <h4 class="services__item-title">
+                      Нестандартный <br />
+                      инжиниринг
+                    </h4>
+                    <a href="#" class="services__item-btn btn"> Подробнее </a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </section>
+      </main>
+
+      <footer class="footer">
+        <div class="container__fluid">
+          <div class="footer__inner">
+            <div class="footer__top">
+              <a
+                href="/"
+                class="header__logo logo"
+                aria-label="ООО СМС — на главную"
+              >
+                <img src="/logo.svg" alt="ООО СМС" width="172" height="68" />
+              </a>
+              <div class="footer__links">
+                <ul class="footer__links-items">
+                  <li class="footer__links-item">
+                    <a href="#" class="footer__links-link hoverText">Главная</a>
+                  </li>
+                  <li class="footer__links-item">
+                    <a href="#" class="footer__links-link hoverText"
+                      >Портфолио</a
+                    >
+                  </li>
+                  <li class="footer__links-item">
+                    <a href="#" class="footer__links-link hoverText">О нас</a>
+                  </li>
+                </ul>
+                <ul class="footer__links-items">
+                  <li class="footer__links-item">
+                    <a href="#" class="footer__links-link hoverText"
+                      >Проектирование и разработка технологических систем</a
+                    >
+                  </li>
+                  <li class="footer__links-item">
+                    <a href="#" class="footer__links-link hoverText">
+                      Монтаж технологического оборудования и трубопроводов
+                    </a>
+                  </li>
+                  <li class="footer__links-item">
+                    <a href="#" class="footer__links-link hoverText"
+                      >Электромонтаж и автоматизация (АСУ ТП)
+                    </a>
+                  </li>
+                  <li class="footer__links-item">
+                    <a href="#" class="footer__links-link hoverText">
+                      Нестандартный инжиниринг
+                    </a>
+                  </li>
+                </ul>
+              </div>
+              <div class="footer__btns">
+                <div class="footer__btns-block footer__btns-block--top">
+                  <a href="tel:+79294340469" class="tel  btn">
+                    +7 929 434 04 69
+                  </a>
+
+                  <a href="mailto:info@sms-125.ru" class="email  btn">
+                    info@sms-125.ru
+                  </a>
+                </div>
+                <div class="footer__btns-block">
+                  <a
+                    href="https://t.me/username"
+                    class="tg socLinks"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    aria-label="Telegram"
+                  >
+                    <svg
+                      class="tgIcon"
+                      width="25"
+                      height="22"
+                      viewBox="0 0 25 22"
+                      fill="none"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path
+                        d="M18.9308 19L20.2291 13.8066M20.9308 11L20.6808 12M0.930866 9.5C8.43087 6.5 23.5309 0.5 23.9309 0.5C24.3309 0.5 24.4309 0.833333 24.4309 1C23.2642 7.16667 24.4309 1 20.4309 20.5C20.2944 21.1652 20.1076 21.7845 18.9309 21C17.4309 20 13.9308 16.9705 13.4309 17C12.9309 17.0295 9.43091 20 8.93091 20C8.53091 20 6.9309 13.5 6.43087 13C5.82716 12.3963 6.23766 12.9122 0.930869 10.5C0.287074 10.2074 0.430813 9.7 0.930866 9.5ZM8.93091 11L19.9308 4.5C20.4308 4.5 10.5889 13.0257 10.4308 13.5C9.43079 16.5 9.6708 16.5 9.43079 16.5C9.19077 16.5 7.93079 12.5 7.93079 12C7.93079 11.4343 8.7642 11.1667 8.93091 11Z"
+                        stroke="black"
+                        stroke-linecap="round"
+                      />
+                    </svg>
+                  </a>
+
+                  <a
+                    href="https://wa.me/380501234567"
+                    class="wu socLinks"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    aria-label="WhatsApp"
+                  >
+                    <svg
+                      class="wuIcon"
+                      width="24"
+                      height="24"
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path
+                        d="M5.09275 2.77463C7.00188 1.34606 9.37217 0.5 11.9401 0.5C18.2582 0.5 23.3801 5.62189 23.3801 11.9401C23.3801 18.2582 18.2582 23.3801 11.9401 23.3801C8.72881 23.3801 7.22354 21.6741 7.05629 21.7076C6.88904 21.741 6.52108 22.0756 6.25348 22.3097C5.98588 22.5439 5.18307 23.1794 3.7447 23.3132C2.30633 23.447 2.20597 22.6777 2.17252 22.3097C2.13907 21.9417 2.50703 21.5738 1.50351 18.2287C0.700703 15.5527 0.5 12.9213 0.5 11.9401C0.5 9.41251 1.31969 7.0764 2.70774 5.18307M3.50388 4.213C3.66168 4.04082 3.82467 3.87349 3.99262 3.71124M16.2458 15.5862C16.121 15.7264 15.9895 15.8604 15.8517 15.9876M14.9508 16.6679C14.0921 17.1915 13.0846 17.4929 12.0072 17.4929C11.1067 17.4929 10.2551 17.2824 9.49837 16.9076C9.09696 16.6902 9.13041 16.5563 9.03006 16.5563C8.94978 16.5563 8.75131 16.7347 8.66211 16.8239C8.59521 16.8908 7.9262 17.5598 7.49134 17.5598C7.05649 17.5598 6.95616 16.9911 6.5213 15.3186C6.17342 13.9806 6.24255 12.3973 6.3206 11.7729C6.3206 8.61379 8.86657 6.05284 12.0072 6.05284C15.1478 6.05284 17.6938 8.61379 17.6938 11.7729C17.6938 12.8446 17.4008 13.8474 16.8909 14.7048"
+                        stroke="black"
+                        stroke-linecap="round"
+                      />
+                    </svg>
+                  </a>
+                </div>
+              </div>
+            </div>
+            <div class="footer__bottom">
+              <ul class="footer__bottom-items">
+                <li class="footer__bottom-item">
+                  <a
+                    href="https://yandex.ru/maps/?text=Владивосток%2C%20ул.%20Снеговая%2C%201"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    class="footer__bottom-link hoverText"
+                  >
+                    ООО «Сервис монтажные системы», г. Владивосток, ул.
+                    Снеговая, здание 1, офис 9
+                  </a>
+                </li>
+                <li class="footer__bottom-item">
+                  <span>ИНН: 2543195395</span>
+                  <span>КПП: 254301001</span>
+                  <span>ОГРН: 1252500021696</span>
+                    
+                </li>
+               <li class="footer__bottom-item">
+                  <a
+                    href="#"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    class="footer__bottom-link hoverText"
+                  >
+                    Политика конфиденциальности
+                  </a>
+                </li>
+
+              </ul>
+            </div>
+          <div class="prod">
+            <a href="https://lapki-web.ru/" class="prod__link hoverText">Разработка сайта студия lapki-web.ru</a>
+          </div>
+          </div>
+        </div>
+      </footer>
+    </div>
+    <script type="module" src="/src/main.js"></script>
+  </body>
+</html>
