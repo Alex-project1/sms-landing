@@ -1,7 +1,27 @@
 .order {
-    padding: 50px 0;
-    background-color: #f3f3f3;
+    padding: 50px 0 ;
   
+  background-color: #f3f3f3;
+  &__title{
+    font-size: var(--h2);
+    font-weight: 500;
+    margin-bottom: 10px;
+    color: #000;
+    text-align: center;
+  }
+  &__subtitle{
+    font-size: var(--order);
+    font-weight: 400;
+    color: #000;
+    text-align: center;
+    margin-bottom: 50px;
+  }
+    @media (max-width:960px){
+      padding: 30px 0;
+      &__subtitle{
+        margin-bottom: 30px;
+      }
+    }
     &__form {
       display: grid;
       grid-template-columns: repeat(2, 1fr);
@@ -127,3 +147,146 @@
       }
     }
   }
+.modal {
+  position: fixed;
+  z-index: 1100;
+  inset: 0;
+
+  width: 100%;
+  height: 100dvh;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  padding: 30px;
+
+  visibility: hidden;
+  opacity: 0;
+
+  // ВАЖНО:
+  // оболочка модалки не должна перекрывать overlay
+  pointer-events: none;
+
+  transition:
+    opacity .3s ease,
+    visibility .3s ease;
+
+  .order {
+    width: 100%;
+    max-width: 1100px;
+
+    background-color: var(--colorBg);
+position: relative;
+    opacity: 0;
+
+    transform:
+      translateY(35px)
+      scale(.94);
+
+    transition:
+      opacity .35s ease,
+      transform .45s cubic-bezier(.16, 1, .3, 1);
+
+    // А вот сама форма кликабельная
+    pointer-events: auto;
+
+    box-shadow:
+      0 25px 80px rgba(0, 0, 0, .45),
+      0 0 0 1px rgba(255, 255, 255, .05);
+&__close {
+  position: absolute;
+  top: 18px;
+  right: 18px;
+
+  width: 38px;
+  height: 38px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  padding: 0;
+
+  color: #fff;
+  background: transparent;
+
+  border: 1px solid rgba(255, 255, 255, .4);
+  border-radius: 3px;
+
+  cursor: pointer;
+
+  transition:
+    border-color .3s ease,
+    box-shadow .3s ease,
+    transform .3s ease;
+
+  span {
+    position: absolute;
+
+    width: 18px;
+    height: 2px;
+
+    background-color: #fff;
+    border-radius: 10px;
+
+    transition:
+      background-color .3s ease,
+      transform .3s ease;
+  }
+
+  span:first-child {
+    transform: rotate(45deg);
+  }
+
+  span:last-child {
+    transform: rotate(-45deg);
+  }
+
+  &:hover,
+  &:focus-visible {
+    border-color: var(--colorBlue);
+    box-shadow: 0 0 6px var(--colorBlue);
+
+    transform: translateY(-2px);
+
+    span {
+      background-color: var(--colorBlue);
+    }
+  }
+
+  &:active {
+    transform: translateY(0) scale(.95);
+  }
+
+  &:focus-visible {
+    outline: 2px solid var(--colorBlue);
+    outline-offset: 3px;
+  }
+}
+    &__title {
+      color: #fff;
+    }
+
+    &__subtitle {
+      color: #fff;
+    }
+    &__agreement-text{
+      color: #fff;
+    }
+  }
+
+
+  &.is-open {
+    visibility: visible;
+    opacity: 1;
+
+    .order {
+      opacity: 1;
+
+      transform:
+        translateY(0)
+        scale(1);
+    }
+  }
+}

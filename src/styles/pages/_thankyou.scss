@@ -1,0 +1,28 @@
+
+
+.thank-you {
+  flex: 1;
+
+  padding-top: calc(var(--header-height) + 20px);
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  &__inner {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 38px;
+    padding: 50px 0;
+  }
+  &__title {
+    text-align: center;
+    font-size: var(--h1);
+    font-weight: 600;
+    span {
+      display: block;
+      color: #e52323;
+    }
+  }
+}

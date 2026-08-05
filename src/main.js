@@ -36,6 +36,7 @@ burger?.addEventListener('click', () => {
 
 overlay?.addEventListener('click', () => {
   setMenuState(false);
+  closeOrder();
 });
 
 menuLinks.forEach((link) => {
@@ -49,6 +50,7 @@ menuLinks.forEach((link) => {
 document.addEventListener('keydown', (event) => {
   if (event.key === 'Escape') {
     setMenuState(false);
+    closeOrder();
   }
 });
 
@@ -56,4 +58,31 @@ window.addEventListener('resize', () => {
   if (window.innerWidth > 1200) {
     setMenuState(false);
   }
+});
+
+const orderBtns = document.querySelectorAll('.hero__btn');
+const orderModal = document.querySelector('#order');
+const orderClose = document.querySelector('.order__close');
+
+orderClose?.addEventListener('click', closeOrder);
+function openOrder() {
+  if (!orderModal) return;
+
+  orderModal.classList.add('is-open');
+
+  document.body.classList.add('order-open');
+  document.documentElement.classList.add('order-open');
+}
+
+function closeOrder() {
+  if (!orderModal) return;
+
+  orderModal.classList.remove('is-open');
+
+  document.body.classList.remove('order-open');
+  document.documentElement.classList.remove('order-open');
+}
+
+orderBtns.forEach((btn) => {
+  btn.addEventListener('click', openOrder);
 });
